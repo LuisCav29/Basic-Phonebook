@@ -1,9 +1,9 @@
-const Filter = (props) => {
+const filter = (props) => {
     return (
         <div>
-            Filter shown with: <input value={props.filter} onChange={props.handleFilterChange} />
+            Filter shown with <input value={props.filter} onChange={props.handleFilterChange} />
         </div>
     )
 }
 
-export default Filter;
+export default filter;

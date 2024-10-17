@@ -34,5 +34,7 @@ export default [
         { allowConstantExport: true },
       ],
     },
+    'react/prop-types': 'off', // Disable prop-types as we use TypeScript
+    'no-unused-vars': 'off', // Disable no-unused-vars as we use TypeScript
   },
 ]
