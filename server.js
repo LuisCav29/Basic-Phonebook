@@ -1,6 +1,13 @@
 import express from 'express';
+import morgan from 'morgan';
+
 const app = express();
 app.use(express.json());
+
+
+morgan.token('body', function (req, res) { return JSON.stringify(req.body) });
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'));
+
 
 let contactos = [
           {
@@ -77,3 +84,4 @@ app.post('/api/persons', (req, res) => {
 app.listen(3001, () => {
     console.log('Server running on port 3001');
 });
+
